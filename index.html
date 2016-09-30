@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>The-uwp-tools-list by grazies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">The-uwp-tools-list</h1>
+      <h2 class="project-tagline"> :ballot_box_with_check: The UWP Tools List. An extensive list of potentially useful UWP (Universal Windows Platform for Windows 10) Frameworks, Toolkits, Apps, Tools, Libraries, Samples etc to help make your UWP development more awesome. (AKA WinRT, XAML, Metro, UAP)The list is non-curated with opininated comments when available.</h2>
+      <a href="https://github.com/grazies/The-UWP-Tools-List" class="btn">View on GitHub</a>
+      <a href="https://github.com/grazies/The-UWP-Tools-List/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/grazies/The-UWP-Tools-List/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>Note: A lot of volunteer effort by individuals supporting the UWP Platform is represented in this list. When you can, please consider giving feedback to the authors, testing their code and filing issue reports/feature requests and hit the Star button for their project. If your favorite project is missing from this list, please let me know.</p>
+
+<h1>
+<a id="ballot_box_with_check-the-uwp-tools-list" class="anchor" href="#ballot_box_with_check-the-uwp-tools-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><g-emoji alias="ballot_box_with_check" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2611.png">☑️</g-emoji> The-UWP-Tools-List</h1>
+
+<p>UWP - Universal Windows Platform for Windows 10 Desktop, Windows 10 Tablets, Windows 10 Mobile Phones, Windows 10 Pixelsense, Windows 10 IOT, Windows Server, Windows 10 HoloLens, and Windows 10 Xbox.</p>
+
+<p>Some UWP libraries are PCL based and should also work with Android and Apple IOS via Xamarin. PCL targeted at .NET 3 also work with Unity 3D as another way of targeting Android and IOS. This List is currently focused on Windows 10 devices but I'll try to call out other targets. The introduction of .NET Core should also help in this area.</p>
+
+<p>On a Windows 10 Desktop or Tablet, a UWP App is typically deployed to a safe sandboxed environment via the Windows Store but the App can also be easily sideloaded to access legacy Windows 10 Desktop features and services with the <a href="https://github.com/lancecontreras/BCTemplates">BCTemplates</a>  project being an example of one approach. This process has become very convenient with the Anniversary Update and is a simple setting in "Update &amp; security" which makes a Windows 10 Tablet and Windows 10 Mobile device a very convenient deployment device for all kinds of touch based applications out in the "Real World"</p>
+
+<p>This is extensive list (in progress) of potentially useful UWP Tools, Libraries, Samples etc to help make your UWP development more awesome. The list is non-curated (but with opininated comments when available). The ultimate objective is to provide a broad starting point for UWP development to perhaps help to offset the currently chaotic and sporadic information that is generally available.</p>
+
+<p>All contributions are welcome. Try to include a Title, Link, Description but any comment is welcome. Adding an GitHub Issue is another low effort way to add something here. I'll even try to insert any editorial type comments you might want to share in order to make this document a bit more interesting to read over and above a rather dry list of projects.</p>
+
+<h1>
+<a id="microsoft" class="anchor" href="#microsoft" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsoft</h1>
+
+<p>Note that current Microsoft Emulators are based on Hyper-V which is a low overhead VM technology. To painlessly fire up emulators, you need both a modern CPU that supports SLAT instructions and the "Pro" version of Windows 10.</p>
+
+<h3>
+<a id="microsoft-downloads-and-tools-for-windows-10" class="anchor" href="#microsoft-downloads-and-tools-for-windows-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsoft Downloads and tools for Windows 10</h3>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/downloads">https://developer.microsoft.com/en-us/windows/downloads</a></p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/develop/app-certification-kit">Windows App Certification Kit</a> This is an often overlooked gem. If you have a .NET libary etc and want to know how much of you code depends on non UWP API, this tool can help.</p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk">Windows 10 SDK</a> This is required, but included with VS 2015. </p>
+
+<p><a href="https://msdn.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator">Mobile Emulator</a></p>
+
+<p><a href="https://devoloper.microsoft.com/en-us/windows/holographic/development_overview">HoloLens</a> Get the tools you need to build apps for Windows, including holographic apps. There is no separate SDK for HoloLens; holographic app development uses Visual Studio 2015 Update 3 with the Windows 10 SDK (version 1511 or later). Don't have a HoloLens? You can install the <a href="">HoloLens emulator</a> <a href="https://developer.microsoft.com/en-us/windows/holographic/using_the_hololens_emulator">https://developer.microsoft.com/en-us/windows/holographic/using_the_hololens_emulator</a> to build holographic apps without a HoloLens. We also recommend installing the Unity game engine as an easy way to get started creating holographic apps.</p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit">Multilingual app toolkit</a></p>
+
+<p><a href="https://developer.microsoft.com/en-us/store/badges">Badges</a> create the HTML and get the artwork needed to promote your apps and content</p>
+
+<p><a href="https://visualstudiogallery.msdn.microsoft.com/229b7858-2c6a-4073-886e-cbb79e851211">Microsoft Store Services SDK</a> Create A/B tests that you can run and manage in Dev Center. Launch Feedback Hub so customers can submit feedback and upvotes that you can review in Dev Center. Use the advertising APIs to display banner ads and video interstitial ads.</p>
+
+<p><a href="https://dev.onedrive.com/">OneDrive API 2.0</a></p>
+
+<p><a href="https://azure.microsoft.com/en-us/documentation/services/app-service/mobile/">Azure-adding a cloud backend to your mobile app</a></p>
+
+<p><a href="https://msdn.microsoft.com/library/windows/desktop/ee663275.aspx">Where is the DirectX SDK?</a> DirectX is now a fundamental part of Windows.Starting with Windows 8, the DirectX SDK is included as part of the Windows SDK. We originally created the DirectX SDK as a high-performance platform for game development on top of Windows. As DirectX technologies matured, they became relevant to a broader range of applications. Today, the availability of Direct3D hardware in computers drives even traditional desktop applications to use graphics hardware acceleration. In parallel, DirectX technologies are more integrated with Windows. </p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/featured/lumia">Microsoft Lumia SDKs</a> SensorCore SDK 1.2 Preview &amp; Imaging SDK 3.0</p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines">VM - Get a Windows 10 development environment</a> Run this VM on your current Mac or PC for an evaluation of the Universal Windows Platform tools and technologies</p>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/iot/Downloads.htm">Windows 10 IoT Core</a></p>
+
+<h3>
+<a id="code-samples" class="anchor" href="#code-samples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Samples</h3>
+
+<p><a href="https://developer.microsoft.com/en-us/windows/samples">https://developer.microsoft.com/en-us/windows/samples</a></p>
+
+<p><a href="https://github.com/Microsoft/Windows-universal-samples">Microsoft UWP Official Samples</a> This is is the main repo of Microsoft UWP samples. A multitude of tiny code bits showing every part of UWP.</p>
+
+<p><a href="https://github.com/Microsoft/WindowsUIDevLabs">Windows.UI.Composition</a> With the deceptive name of "Windows UI dev labs" this repo contains code samples, demos, experiments, prototypes, and preview explorations that show how to use Windows.UI.Xaml and Windows.UI.Composition to make beautiful UWP applications. </p>
+
+<p><a href="https://github.com/Microsoft/Win2D/archive/master.zip">Win2D</a> Win2D is an easy-to-use Windows Runtime API for immediate mode 2D graphics rendering with GPU acceleration. It is available to C# and C++ developers, and utilizes the power of Direct2D, integrating seamlessly with XAML and CoreWindow.</p>
+
+<p><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX 12 graphics samples</a> DirectX 12 Graphics samples that demonstrate how to build graphics intensive applications on Windows.</p>
+
+<p><a href="https://github.com/Microsoft/Windows-task-snippets">Windows task snippets</a> Snippets of ready-to-use code that accomplish small, but useful, tasks of interest to UWP app developers. These snippets show simple solutions to common problems, and simple recipes to help you implement new app features.</p>
+
+<p><a href="https://github.com/Microsoft/Appsample-Photosharing">Photo Sharing App</a> UWP app sample that demonstrates real-world social media experiences around photo sharing.</p>
+
+<p>PhotoSharingApp is a Universal Windows Platform (UWP) app sample that demonstrates real-world social media experiences around photo sharing.</p>
+
+<p>With this app, users can earn virtual gold by uploading and sharing photos with people from all around the world. They can upload photos of their cats, shoes, houses, or last vacations, and see how they compete against other users. Are their photos a great gold source? Are they among the most generous contributors? They can find out on the app's leaderboard.</p>
+
+<p>The goal of this app is to provide a complete, end-to-end example of a real-world app that uses a variety of UWP features, and exhibits design and development best practices. This makes it a great source of code you can copy into your own apps. It also provides an example of what a real-world app architecture might look like. The decoupled architecture makes it easy to reuse code or to make changes and build your own photo sharing app, which you can then publish in the Windows Store.</p>
+
+<p><img src="https://github.com/Microsoft/Appsample-Photosharing/raw/master/Images/Category-Overview-Desktop-Mobile.jpg" alt=""></p>
+
+<ul>
+<li>   Browse photo categories and navigate into photo collections and photo details.</li>
+<li>   Take and upload photos directly in the app or upload an existing photo.</li>
+<li>   Give gold and add comments to photos uploaded by other users.</li>
+<li>   Receive push notifications when users are given gold for uploaded photos.</li>
+<li>   Explore a leaderboard of users with the most gold, users that have given the most gold to other photos, and the photos that have received the most gold.</li>
+<li>   Sign in with a Microsoft, Facebook, Google, or Twitter account.</li>
+<li>   Report content as abusive, inappropriate, or spam.</li>
+<li><p>Buy virtual gold using in-app purchase.</p></li>
+<li><p>Adaptive UI using the SplitView control (see video on Channel 9) and adaptive triggers:</p></li>
+<li>In-app purchase (see the Windows.ApplicationModel.Store namespace):</li>
+<li>Separation between user interface, business logic and data models (MVVM):</li>
+<li>Extensibility and flexibility using the Unity dependency container:</li>
+<li>How to connect your app to an Azure App Service</li>
+<li>Real-world service implementation for storing uploaded photos using Azure DocumentDB</li>
+<li>Sign-in with Azure Mobile Apps:</li>
+<li>Usage analysis with Visual Studio Application Insights</li>
+<li>Push Notifications (see Integration with App Service Mobile Apps in Azure Notification Hubs:</li>
+</ul>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-rssreader">Rss Reader</a> A UWP app sample for retrieving RSS feeds and viewing articles, demonstrating adaptive layout and hierarchical navigation patterns.</p>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-rssreader/blob/master/RssReader.png" alt=""></p>
+
+<ul>
+<li>The navigation menu (hamburger menu) pattern and screen-width adaptivity using the SplitView control and the AdaptiveTrigger class.</li>
+<li>The Syndication APIs (Windows.Web.Syndication) to retrieve RSS feed data.</li>
+<li>The DataContractSerializer class to save and restore app data from local storage.</li>
+<li>C# and XAML using the MVVM design pattern.</li>
+</ul>
+
+<p>March 2016 update:</p>
+
+<ul>
+<li>A complete redesign of the UI to show effective use of color, type, images, and animated effects.</li>
+<li>Major improvements to layout, navigation, and window-size adaptivity to support small and large screens.</li>
+<li>Use of the WebView control to show articles within the app.</li>
+<li>The ability to rename feeds and to rearrange feeds and favorites.</li>
+</ul>
+
+<p>We implemented the navigation and layout patterns in this sample using code from the XAML navigation menu and XAML master/detail samples in the Windows-universal-samples repo. These samples represent the current minimum recommendations for these patterns, and the RssReader sample will continue to reflect this guidance in future updates. </p>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-familynotes">Family notes</a></p>
+
+<p>FamilyNotes is a Universal Windows Platform (UWP) app sample that explores different input modalities and scenarios of user awareness. The FamilyNotes sample is essentially a bulletin board app that allows family members to leave notes for each other on a common PC/tablet just like they would a bulletin board. Using text, speech, ink, or pictures, a user can create a note and tag it for another user. Later when that other user approaches the PC/Tablet, the app uses imaging APIs and the Microsoft Cognitive Services (Face API) to detect their presence and display the notes that have been left for them, effectively filtering based on facial recognition. While the app is open, users can naturally interact with it using speech (“Add note for Bob”). If the app isn’t open, a user can easily launch it and interact with it using Cortana.</p>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-familynotes/raw/master/Screenshots/Using_Ink_Voice_and_Face_Recognition_in_a_UWP_App_Video.PNG" alt=""></p>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-familynotes/raw/master/Screenshots/FamilyNotes.PNG" alt=""></p>
+
+<ul>
+<li>   Speech recognition and speech synthesis by using the SpeechRecognizer and SpeechSynthesizer classes.</li>
+<li>   User detection using the MediaCapture and FaceDetectionEffect classes.</li>
+<li>   User facial recognition using the Microsoft Face API.</li>
+<li>   Activation through Cortana voice commands, defined in VoiceCommands.xml (a VCD file), using VoiceCommands and Activation classes.</li>
+<li>   Pen input using the InkCanvas API</li>
+<li>   JSON serialization using the DataContractJsonSerializer class.</li>
+<li>   Setting the app wallpaper using the Bing image of the day task snippet.</li>
+</ul>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-huelightcontroller">Hue light controller</a></p>
+
+<p>HueLightController is a Universal Windows Platform (UWP) app sample that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the Phillips Hue Lights (a Wi-Fi enabled lighting system). </p>
+
+<p>With Cortana integration, users are able to naturally interact with the lights through speech. They can turn the lights off, change their color, or even engage with Cortana in a back-and-forth conversation to adjust a specific light or change all the lights at once.</p>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-huelightcontroller/raw/master/Screenshots/Connecting.png" alt=""></p>
+
+<p>Additionally, through Bluetooth LE, the app supports a proximity scenario where the lights are automatically turned on/off depending on a user's device relative to a Bluetooth LE beacon. </p>
+
+<ul>
+<li>   Using the HttpClient methods and Newtonsoft.json to interact with the Hue lights' RESTful interface.</li>
+<li>   Extending Cortana to provide an intuitive voice interface for manipulating the lights.</li>
+<li>   Using BLE APIs in the background to watch for a BLE beacon indicating proximity to the lights.</li>
+<li>   Showing an extended splash screen for more time while the app connects to the Hue hub and searches for lights.</li>
+</ul>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-trafficapp">Traffic app</a> and the <a href="https://github.com/Microsoft/Windows-appsample-trafficapp/tree/MVVM">MVVM Version</a></p>
+
+<p>Traffic App is a sample Universal Windows Platform (UWP) app for commuters to track drive times to various locations. The user adds frequently-visited destinations using app-bar buttons or by tapping and holding on the map. Traffic App then provides a quick view into how long it will take to drive to each place from the user’s current location, following the fastest route. The user can also flag a particular destination and a background task will periodically monitor traffic to that location, alerting the user when traffic is adding ten minutes or more to the travel time. </p>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-trafficapp/raw/MVVM/Images/TrafficApp.png" alt=""></p>
+
+<ul>
+<li>   MapControl and MapItemsControl (Windows.UI.Xaml.Controls.Maps)</li>
+<li>   Geolocator (Windows.Devices.Geolocation)</li>
+<li>   MapLocationFinder and MapRouteFinder (Windows.Services.Maps)</li>
+<li>   Background tasks (Windows.ApplicationModel.Background)</li>
+<li>   Toast notifications (Windows.UI.Notifications)</li>
+<li>   Local storage and serialization (Windows.Storage)</li>
+</ul>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-networkhelper">Network helper</a> NetworkHelper library and Quiz Game</p>
+
+<p>NetworkHelper is a sample library that demonstrates the use UWP networking APIs to enable network discovery and communication in your games or apps. Specifically, the library provides the ability for:</p>
+
+<ul>
+<li>   Wi-Fi network discovery and management peer clients over a local Wi-Fi network.</li>
+<li>   Direct communication between discovered devices on the same Wi-Fi network with developer configurable messages.</li>
+</ul>
+
+<p><img src="https://github.com/Microsoft/Windows-appsample-networkhelper/raw/master/Screenshots/QuizGame_JoinGame_scaled.png" alt="">
+<img src="https://github.com/Microsoft/Windows-appsample-networkhelper/raw/master/Screenshots/QuizGame_GameInProgress_scaled.png" alt=""></p>
+
+<p>QuizGame is a Universal Windows Platform (UWP) app sample that uses the NetworkHelper library to enable a pub-style trivia game. When running the sample, you are presented with an option to create a new game as a quiz master on your local network or join an existing game and answer questions from the quiz master. Questions appear on the quiz master's screen while players answer the questions on their own devices. A quiz master can advance the game to additional questions and display the scores at the end. Below are some features that QuizGame uses.</p>
+
+<ul>
+<li>   Simple MVVM (Model, View, ViewModel) coding pattern</li>
+<li>   Simple navigation using code-behind files.</li>
+<li>   NetworkHelper to enable discovery and broadcasting of available games on the local network.</li>
+<li>   NetworkHelper to enable communication between the game and players.</li>
+</ul>
+
+<p><a href="https://github.com/microsoft/Windows-appsample-marble-maze">Marble Maze</a></p>
+
+<p>Marble Maze is a sample Universal Windows Platform (UWP) and DirectX app that demonstrates how to build a basic 3D game using DirectX. This game is a simple labyrinth game where the player is challenged to roll a marble through a maze of pitfalls using tilt controls.</p>
+
+<p>This sample is written in C++ and requires some experience with graphics programming and DirectX. Complete content that examines this code can be found at Developing Marble Maze, a game in C++ and DirectX.</p>
+
+<p><img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/gaming/images/marblemaze.png" alt=""></p>
+
+<ul>
+<li>   Incorporating the Windows Runtime into your DirectX game</li>
+<li>   Using DirectX to render 3D graphics for display in a game</li>
+<li>   Implementing simple vertex and pixel shaders with HLSL</li>
+<li>   Developing simple physics and collision behaviors in a DirectX game</li>
+<li>   Handling input from accelerometer, touch, and mouse, and game controller with the Windows Runtime and XInput</li>
+<li>   Playing and mixing sound effects and background music with XAudio2</li>
+</ul>
+
+<p>See Also: <a href="https://msdn.microsoft.com/windows/uwp/gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx">Developing Marble Maze, a UWP game in C++ and DirectX</a></p>
+
+<p><a href="http://dev.office.com/code-samples">Office 365 code samples</a> integrating Office 365 data and services into your app</p>
+
+<p><a href="https://aka.ms/uwptoolkit">UWP Community Toolkit</a> See description in Controls section</p>
+
+<h1>
+<a id="information" class="anchor" href="#information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Information</h1>
+
+<p><a href="https://github.com/tomzorz/awesome-uwp">awesome-uwp</a> Awesome UWP resources - inspired by Awesome .NET. - It appears to be a normal "awesome-style" "curated" list whereas <a href="https://github.com/10UWP/The-UWP-Tools-List">The-UWP-Tools-List</a> is an attempt to include all possibly useful UWP tools and code. Over time, I hope to have just about everything I can find on GitHub and anywhere else so examine all code carefully before using (but the great glory of open source is that the code speaks for itself) and make sure it has a license you are happy with.  </p>
+
+<h1>
+<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tools</h1>
+
+<p>Note to add some actual Tools that might be handy for UWP development.</p>
+
+<p><a href="https://github.com/JuniperPhoton/IconCreatorForUWP">IconCreatorForUWP</a> IconCreator helps you (developers) create icons of you UWP apps. Just simply import your .png icon file and click the start button. </p>
+
+<p><a href="https://github.com/aL3891/AppxInstaller">AppxInstaller</a> This repostitory was created in respose to some misconceptions and incorrect information about the universal windows platform (UWP) apps, specifically with regards to their dependency on the windows store and suppsed inability to be distributed outside it. This folder contains a powershell script, Generate-AppxMsi.ps1, that packages an appx file into an msi. It will also embed an installation script that will enable sideloading in the registry, trust the application cert if it is not already trusted and deploy the application. Currently this script is a proof of concept with hardcoded values, but later on it will be able to wrap any appx or appx bundle like this and read all the relevant information from the package directly. Appx installer is a file handler for appx files. Using it, when a appx file is double clicked, a window is shown with information about the app. The user can then click install to install the app.</p>
+
+<h1>
+<a id="database" class="anchor" href="#database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Database</h1>
+
+<p><a href="https://github.com/aspnet/EntityFramework">EntityFramework</a> Microsoft's recommended data access technology for new applications in .NET. The ONLY UWP option is SQLite and <a href="http://ef.readthedocs.org/en/latest/providers/sqlite/limitations.html">it is a mess</a>. <a href="http://ef.readthedocs.org/en/latest/platforms/uwp/getting-started.html">Getting Started on Universal Windows Platform</a> (Opinionated Note: "Microsoft's recommended data access technology" has somehow ended up in the damaged situation of SQLite being the ONLY supported target for Microsoft's main thing, the Universal Windows Platform. The insanely stupid SQLite FK mess means that Entity Framework's Magic Unicorn (Migrations) becomes a useless broken technology on the One Microsoft platform that should count as the highest priority effort. UWP without an easy robust Microsoft supported data platform is a Microsoft blind spot that has been a drag on the success of the Win RT platform from the beginning. "You can workaround some of these limitations by manually writing code in your migrations to perform a table rebuild. A table rebuild involves renaming the existing table, creating a new table, copying data to the new table, and dropping the old table. You will need to use the Sql(string) method to perform some of these steps." (<a href="https://github.com/aspnet/EntityFramework/issues/329">https://github.com/aspnet/EntityFramework/issues/329</a>) There is an explanation in this issue: <a href="https://github.com/aspnet/EntityFramework/issues/4423">ESENT database provider</a> which probably translates to "please hold" for another few months)  </p>
+
+<h3>
+<a id="sqlite" class="anchor" href="#sqlite" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQLite</h3>
+
+<p><a href="http://www.sqlite.org/">SQLite</a> SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain. Microsoft uses SQLite as a core component of Windows 10, and in individual numerous products. <a href="https://system.data.sqlite.org/index.html/doc/trunk/www/index.wiki">System.Data.SQLite</a> System.Data.SQLite is an ADO.NET provider for SQLite.  Development and maintenance work is now mostly performed by the SQLite Development Team. The SQLite team is committed to supporting System.Data.SQLite long-term. <a href="https://github.com/mackyle/sqlite">git mirror of SQLite</a> - <a href="https://github.com/sqlitebrowser/sqlitebrowser">DB Browser for SQLite</a> Official home of the DB Browser for SQLite (DB4S) project. Previously known as "SQLite Database Browser" and "Database Browser for SQLite". Website at: <a href="http://sqlitebrowser.org">http://sqlitebrowser.org</a></p>
+
+<p><a href="https://github.com/aspnet/Microsoft.Data.Sqlite">Microsoft.Data.Sqlite</a> SQLite implementations of the System.Data.Common interfaces</p>
+
+<p><a href="https://github.com/praeclarum/sqlite-net">sqlite-net</a> sqlite-net is an open source, minimal library to allow .NET and Mono applications to store data in SQLite 3 databases. It is written in C# and is meant to be simply compiled in with your projects. It was first designed to work with MonoTouch on the iPhone, but has grown up to work on all the platforms (Mono for Android, .NET, Silverlight, WP7, WinRT, Azure, etc.). Very simple methods for executing CRUD operations and queries safely (using parameters) and for retrieving the results of those query in a strongly typed fashion. Works with your data model without forcing you to change your classes. (Contains a small reflection-driven ORM layer.)</p>
+
+<p><a href="https://github.com/ericsink/SQLitePCL.raw">SQLitePCL.raw</a> SQLitePCL.raw is a Portable Class Library (PCL) for low-level (raw) access to SQLite. This library is designed to be the common portable layer upon which friendlier wrappers can be built. Right now, every C# SQLite library writes their own P/Invoke and COM and marshaling and stuff. Build on this library instead and focus more on the upper layer and its goal of providing a pleasant, easy-to-use API for app developers. When people ask me to recommend a friendlier SQLite wrapper, sqlite-net is the one that I usually recommend. SQLitePCL.pretty is another friendly SQLite API wrapper. </p>
+
+<p><a href="https://github.com/bordoley/SQLitePCL.pretty">SQLitePCL.pretty</a> This library wraps the C like SQLiteAPI provided by SQLitePCL.raw with a friendly C# object oriented API. It adds an Async API. SQLitePCL.pretty has a very simple table mapping ORM, available in the SQLitePCL.pretty.Orm package on nuget. It supports inserting both new and existing objects, and finding and deleting objects by primary key, from SQLite database tables. Notably, the ORM is designed to make working with immutable data types much easier by supporting the builder pattern for deserializing database objects. Ineresting features include the ability to iterate through query result sets using LINQ, support for binary streaming of data in and out of SQLite using .NET streams, and a powerful async API built on the RX framework."</p>
+
+<h3>
+<a id="esent" class="anchor" href="#esent" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESENT</h3>
+
+<p><a href="https://msdn.microsoft.com/EN-US/library/gg269181%28v=exchg.10%29.aspx">ESENT</a> Extensible Storage Engine is built into and is available for use on every Windows computer and has been an approved DLL for Windows Store since Windows 8.0. Updates to the database are implemented with a transaction in order to ensure secure operations. ESE enables simultaneous access to multiple databases, including transaction-log file databases that can be used for system recovery. ESE is scalable to large or small applications. <a href="https://managedesent.codeplex.com/">ESENT Managed Interop</a> it is not clear if the .NET wrapper is UWP compatible."It is clear. ESENT Managed Interop is compatible with UWP. Not all nuget package are, but core Interop package on nuget is compatible with UWP, I tested it myself and it work." Thanks to <a href="https://github.com/Opiumtm">Opiumtm</a> for testing that.</p>
+
+<h3>
+<a id="brightstar" class="anchor" href="#brightstar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BrightStar</h3>
+
+<p><a href="https://github.com/BrightstarDB/BrightstarDB">BrightstarDB</a> BrightstarDB is a native .NET RDF triple store. It uses dotNetRDF to provide support for a wide range of RDF syntaxes as well as SPARQL query support. In addition to providing a raw RDF-based API, BrightstarDB also provides support for binding RDF resources to .NET dynamic objects; and a contract-first entity framework that enables the use of LINQ rather than SPARQL for query purposes.</p>
+
+<h3>
+<a id="marcello" class="anchor" href="#marcello" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Marcello</h3>
+
+<p><a href="https://github.com/markmeeus/MarcelloDB">MarcelloDB</a> .net/mono/xamarin/winrt in-process object database. MarcelloDB is a mobile NoSql database. It is very light-weight with minimal memory footprint. MarcelloDB saves plain C# objects, including child objects, lists and collections. Not having to map your objects to the relational model can save you hundreds of lines of code. MarcelloDB is a pure C# implementation, so there is no need to package other binaries.</p>
+
+<h3>
+<a id="dbreeze" class="anchor" href="#dbreeze" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DBreeze</h3>
+
+<p><a href="https://github.com/hhblaze/DBreeze">DBreeze</a> - <a href="http://dbreeze.codeplex.com/">http://dbreeze.codeplex.com/</a> - Professional, open-source, NoSql (embedded Key / Value storage), transactional, ACID-compliant, multi-threaded, object database management system for
+.NET 3.5&gt; / XAMARIN MONO / .NET Core / UWP (Universal Windows Platform). Written in C# .</p>
+
+<h3>
+<a id="litedb" class="anchor" href="#litedb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LiteDB</h3>
+
+<p><a href="https://github.com/mbdavid/LiteDB">LiteDB</a> - <a href="http://www.litedb.org/-LiteDB">http://www.litedb.org/-LiteDB</a> - A .NET NoSQL Document Store in a single data file. LiteDB is now functional for UWP via PCL.</p>
+
+<h3>
+<a id="couchbase" class="anchor" href="#couchbase" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Couchbase</h3>
+
+<p><a href="https://github.com/couchbase/couchbase-lite-net">Couchbase</a> - <a href="http://www.couchbase.com/">http://www.couchbase.com/</a> - <a href="http://developer.couchbase.com/mobile/">http://developer.couchbase.com/mobile/</a> - The NoSQL database solution for mobile — everything you need to build always-available apps that work online &amp; offline. Couchbase Lite is
+a fully functional, on-device, lightweight, native, embedded NoSQL database. With Couchbase Lite, you have the full power of a Couchbase database locally on the device. You can create, update, delete, query, sync and much, much more.</p>
+
+<h4>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Note:</h4>
+
+<p>Based on this GitHub issue: <a href="https://github.com/couchbase/couchbase-lite-net/issues/535">https://github.com/couchbase/couchbase-lite-net/issues/535</a> - Couchbase Lite for .NET will be available soon for UWP. "my goal is to still have it in 2016. After the 1.3 release we are going to assess platform support going forward (including the possibility of dropping some, which would free up time for UWP)."</p>
+
+<h1>
+<a id="data-other" class="anchor" href="#data-other" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Other</h1>
+
+<p><a href="https://github.com/YAWL/YAWL.Serialization">YAWL.Serialization</a> Serialization helper library for Windows applications</p>
+
+<p><a href="https://github.com/joseangelmt/ObservableSettings">ObservableSettings</a> Create a Settings class for UWP (Universal Windows Platform) that is observable, strongly typed and with default values.</p>
+
+<p><a href="https://github.com/kompiuter/DynamicDataTemplate">DynamicDataTemplate</a> An example of how to dynamically select a data template based on the data type of an item, including examples in WPF &amp; UWP.</p>
+
+<p><a href="https://github.com/rcervantes-dev/DevKit.Xamarin.Storage">DevKit Xamarin Storage</a> DevKit Xamarin Storage is a library to save data serialized in local files, supported platforms: iOS, Android and UWP.</p>
+
+<p><a href="https://github.com/DevTheo/DiscToolsUWP">DiscToolsUWP</a> no description, has DiscToolsLibUWP</p>
+
+<p><a href="https://github.com/dsplaisted/PCLStorage">PCLStorage</a> PCL Storage provides a consistent, portable set of local file IO APIs for .NET, Windows Phone, Windows Store, Xamarin.iOS, Xamarin.Android, and Silverlight. This makes it easier to create cross-platform .NET libraries and apps.</p>
+
+<h1>
+<a id="templates" class="anchor" href="#templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Templates</h1>
+
+<p><a href="https://github.com/Windows-XAML/Template10">Template10</a> Making Windows 10 apps awesome</p>
+
+<p><a href="https://github.com/Windows-XAML/2016MVA-Template10">2016MVA-Template10</a></p>
+
+<p><a href="https://github.com/StefanJanssen95/HamburgerTemplateUWP">HamburgerTemplateUWP</a> A Hamburger Template for Visual Studio 2015 UWP</p>
+
+<p><a href="https://github.com/espenrl/UWP-Attached-ViewModel-Behavior-Template">UWP-Attached-ViewModel-Behavior-Template</a></p>
+
+<p><a href="https://github.com/lancecontreras/BCTemplates">BCTemplates</a> Brokered Component Templates for UWP. These template includes client, server and proxy project and a starterkit which is a solution that contains those three projects. These are the basic projects needed to create a brokered component application. </p>
+
+<p><a href="https://github.com/sozercan/WAT-UWP">WAT-UWP</a> Web App Template (WAT) is Visual Studio 2015 project that lets developers create Universal Windows Platform (UWP) apps based on existing web content. Used in the right way, WAT can facilitate the creation of compelling extensions to your web content for Windows users.</p>
+
+<p><a href="https://github.com/kbfoot/UWPNavBasics">UWPNavBasics</a> A replication of the Windows navigation sample for UWP with some tweaks to create a basic template</p>
+
+<p><a href="https://github.com/dkackman/UWPAppSkeleton">UWPAppSkeleton</a> Project Template for an MMVM Light universal app that will create the skeleton of an app that looks and feels a lot like the built in Microsoft Windows 10 app (Weather, NFL etc). It's got all the basic stuff plumbed out like navigation and a navigation control, a settings page, Theme switch etc.</p>
+
+<p><a href="https://github.com/mspviraj/UWPProjectTemplates">UWPProjectTemplates</a> Visual Studio 2015 Project Templates for Universal Windows Platform - UWPSimpleTemplate - bare bones MVVM support, UWPShellTemplate - provides a Hamburger navigation type AppShell with 4 different types of sample Views, PrismSimpleTemplate - bare bones using Prism 6 for UWP, PrismShellTemplate - same as UWPShellTemplate but using Prism 6 for UWP</p>
+
+<p><a href="https://github.com/pablovargan/UWPTemplate">UWPTemplate</a></p>
+
+<p><a href="https://github.com/programmersommer/UWP_Application_Template">UWP_Application_Template</a> UWP template with pin/unpin secondary tile, share contract, rate and review and toast function</p>
+
+<p><a href="https://github.com/mapaux/UWP10template">UWP10template</a> UWP template using MVVM pattern</p>
+
+<h1>
+<a id="composition" class="anchor" href="#composition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Composition</h1>
+
+<p>Note: Composition is part of the Windows API since 10586 and it should just get used. It is part of the solution to the many WPF performance complaints from Vista days. Another large issue from those days was 3D interop with DirectX and here I am not seeing any projects exploring Windows.UI.Composition and DirectX. Anyone? There is this project: <a href="https://github.com/PJayB/DirectCompositionDirectX12Sample">DirectCompositionDirectX12Sample</a></p>
+
+<p><a href="https://github.com/Microsoft/WindowsUIDevLabs">Windows UI Dev Labs</a> (Previously was <a href="https://github.com/Microsoft/composition">Windows.UI.Composition WinRT API</a> ) Windows UI Dev Labs the place for getting the latest code samples and demos using Windows.UI.Xaml and Windows.UI.Composition to make beautiful Universal Windows Platform applications. - Welcome to the Windows UI Dev Labs repository for the latest code samples, demos, and developer feedback for building beautiful and engaging Universal Windows Platform apps using Windows UI. The code samples and demos are targeted for developers who are interested in experimenting, building, and providing feedback on the latest flighting Windows UI APIs.</p>
+
+<p>We are focused on creating a place where we can experiment, inpsire, and receive developer feedback on:</p>
+
+<ul>
+<li>   Flighting APIs for Windows UI</li>
+<li>   Testing out new UX patterns</li>
+<li>   Early reference implementations and prototypes</li>
+<li>   Inspiring demonstrations of the Windows UI API</li>
+</ul>
+
+<p>If you are a developer getting familiar with the Windows.UI.Xaml and Windows.UI.Composition APIs, want to build beautiful UI experiences, and don't mind a few bugs here and there; then, this is the place for you. We also want to see what inspiring UX you're building and you can reach out to us on Twitter <a href="https://github.com/WindowsUI" class="user-mention">@WindowsUI</a>. We're excited to see what you can you make with Windows UI.</p>
+
+<p>We are pleased to announce that as of Windows 10 Build 10586 and SDK Version 1511 the Windows.UI.Composition API is now fully public. Many thanks to all of those who contibuted feedback to on the API during it's preview phase to make it that much better. This repository contains code samples created with the Windows.UI.Composition WinRT API. Samples contained in this repository created by the Microsoft Composition team or contributors</p>
+
+<p><a href="https://github.com/clarkezone/UWPCompositionDemos">UWPCompositionDemos</a> I work on the Composition team at Microsoft that builds the Windows.UI.Composition APIs for the Universal Windows Platform. This project is where I'll be putting demos of the API's functionality when I get time :-)</p>
+
+<p><a href="https://github.com/ScottIsAFool/WinCompositionBehaviours">WinCompositionBehaviours</a> A set of behaviours that use the Windows Composition APIs</p>
+
+<p><a href="https://github.com/robmikh/audiovisualization">UWP audio visulization sample</a> UWP audio visulization sample. Work in progress.</p>
+
+<p><a href="https://github.com/ratishphilip/CompositionProToolkit">Composition Pro Toolkit</a> Collection of Helper classes and controls (using Win2d) for Windows.UI.Composition - CompositionProToolkit is a collection of helper classes for Windows.UI.Composition. It also contains controls which can be used in UWP applications. It has dependency on the Win2D and the CompositionExpressionToolkit libraries.</p>
+
+<p><a href="https://github.com/ratishphilip/CompositionExpressionToolkit">CompositionExpressionToolkit</a> A toolkit for setting the Expression in CompositionAnimation via Lambda Expressions - CompositionExpressionToolkit is a collection of Extension methods and Helper classes which make it easier to use Windows.UI.Composition features. They include methods for creating statically typed CompositionAnimation expressions, CompositionPropertySet extension methods, helper methods for creating ScopedBatchSets etc.</p>
+
+<p><a href="https://github.com/ratishphilip/CompositeHomeScreen">CompositeHomeScreen</a> A mockup of iPhone home screen created using Windows.UI.Composition API - This project mainly contains a HomeScreen page which hosts the Menu and the subsequent child pages. The main constituents of the HomeScreen page can be see in the image below.</p>
+
+<p><a href="https://github.com/skendrot/Composition.UI">Composition.UI</a> <a href="http://www.visuallylocated.com/post/2015/12/10/Easy-Parallax-effect-in-Windows-10.aspx">Easily Create Parallax effects in Windows 10 apps</a></p>
+
+<p><a href="https://github.com/JustinXinLiu/Continuity">Continuity</a> A project that aims to provide some cool animations, transitions and controls, built on top of the new Windows Composition API.</p>
+
+<p><a href="https://github.com/JustinXinLiu/EffectsAndAnimationsWinComposition">EffectsAndAnimationsWinComposition</a> Some experiments on the new effect and animation systems in Windows Composition. Please note that I could simplify things by using the TouchArea Rectangle as the container visual to host the effect visual, but I wanted to prove a point that I could use expression key frame animation to manipulate multiple elements at the same time!</p>
+
+<p><img src="https://camo.githubusercontent.com/44a3ce985aed3469edf86e0e7bcd1670fbdc616c/687474703a2f2f692e737461636b2e696d6775722e636f6d2f65574a62472e676966" alt=""></p>
+
+<p><a href="https://github.com/JustinXinLiu/StickyHeader_WindowsComposition">StickyHeader_WindowsComposition</a> Answer to this Stack Overflow question. <a href="http://stackoverflow.com/questions/35510825/how-to-check-if-an-ui-element-has-reached-the-top-of-the-page-in-windows-phone">http://stackoverflow.com/questions/35510825/how-to-check-if-an-ui-element-has-reached-the-top-of-the-page-in-windows-phone</a></p>
+
+<p><a href="https://github.com/JustinXinLiu/PullToRefreshUWP_WindowsComposition">PullToRefreshUWP_WindowsComposition</a> Pull to refresh with the new Windows Composition API.</p>
+
+<p><a href="https://github.com/tomzorz/Finch">Finch</a> A library to help you ease into the wonders of Windows.UI.Compositon - Strongly-typed expression animations - Behaviors use effects and features with ease from XAML - Moving the needle from possible to easy with easy-to-use animation API wrapper &amp; easy-to-use effects API wrapper</p>
+
+<p><a href="https://github.com/tomzorz/Composition_fun">Composition fun</a> Fun projects with Windows.UI.Composition. Small assorted Windows.UI.Composition projects</p>
+
+<p><a href="https://github.com/WaltRitscher/WinCompositionPlayground">WinCompositionPlayground</a></p>
+
+<p><a href="https://github.com/r2d2rigo/WindowsUI-Samples">WindowsUI-Samples</a> Samples and demos for Windows UI/Composition.</p>
+
+<p><a href="https://github.com/r2d2rigo/WinCompositionTiltEffect">WinCompositionTiltEffect</a> A behavior for adding a tilt effect to any UWP control, implemented using Windows Composition.</p>
+
+<p><a href="https://github.com/Sergio0694/UICompositionAnimations">CompositionAnimations</a> A wrapper PCL for the Windows.UI.Composion animations</p>
+
+<p><a href="https://github.com/renewal-wu/CompositionAnimationsDemo">CompositionAnimationsDemo</a></p>
+
+<p><a href="https://github.com/tracker086/CompositionEntranceAnimationExample">CompositionEntranceAnimationExample</a> no desc.</p>
+
+<p><a href="https://github.com/pengzhxyz/CarouselView">CarouselView</a> An UWP carousel control supporting looping and based on composition api</p>
+
+<ul>
+<li>   It supports infinite looping scrolling</li>
+<li>   AutoSwitch supporting</li>
+<li>   It could show 3 pictures at the same time, rather than filpview which only shows one picture</li>
+<li>   Responsable to the container size</li>
+<li>   Touch or mouse wheel</li>
+<li>   Thanks to the Composition API!</li>
+</ul>
+
+<p><a href="https://github.com/pnp0a03/CompositionGridView">CompositionGridView</a> no desc.</p>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Composition-Radial-Gauge">UWP-Composition-Radial-Gauge</a> A XAML Radial Gauge Custom Control for UWP that is partially drawn by the Composition API. It uses the release version of Composition API, so this requires Requires Visual Studio 2015 update 1 and Windows 10 10586 SDK on your side. A blog post that explains the code is right here: <a href="https://xamlbrewer.wordpress.com/2016/01/23/building-a-custom-uwp-control-with-xaml-and-the-composition-api/">https://xamlbrewer.wordpress.com/2016/01/23/building-a-custom-uwp-control-with-xaml-and-the-composition-api/</a>.</p>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Composition-API-Clock">UWP-Composition-API-Clock</a> Demonstrates using the Composition API in a Universal Windows Platform XAML control.Requires Visual Studio 2015 update 1, and Windows 10 10586 SDK. Contains a copy of Microsoft.UI.Composition.Toolkit that is maintained here: <a href="https://github.com/Microsoft/composition">https://github.com/Microsoft/composition</a>. A blog post explaining the code is here: <a href="https://xamlbrewer.wordpress.com/2016/01/04/using-the-composition-api-in-uwp-apps/">https://xamlbrewer.wordpress.com/2016/01/04/using-the-composition-api-in-uwp-apps/</a>.</p>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Composition-Rating-Control">UWP-Composition-Rating-Control</a> A UWP Rating Control drawn by the Composition API. There's a blog post explaining the code right here: <a href="https://xamlbrewer.wordpress.com/2016/07/11/building-a-uwp-rating-control-using-xaml-and-the-composition-api/">https://xamlbrewer.wordpress.com/2016/07/11/building-a-uwp-rating-control-using-xaml-and-the-composition-api/</a> - Comes with the following dependency properties:</p>
+
+<ul>
+<li>   Maximum (int): number of stars, maximum score</li>
+<li>   StepFrequency (double): rounding interval, a percentage (e.g. 0.25)</li>
+<li>   Value (double): current value (from 0 to Maximum)</li>
+<li>   ItemHeight (int): height (and width) of each image in device independent pixels</li>
+<li>   ImagePadding (int): pixels between images</li>
+<li>  FilledImage (uri): path to the filled image</li>
+<li>   EmptyImage (uri): path to the empty image</li>
+<li>   IsInteractive (bool): whether or not the control responds to user input (tapping or sliding)</li>
+</ul>
+
+<p>Behavior:</p>
+
+<ul>
+<li>Tap on an image to apply the integral value</li>
+<li>Slide horizontally over the control to decrease and increase value with StepFrequency</li>
+</ul>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Composition-Effects-Sample">UWP-Composition-Effects-Sample</a> An UWP app that illustrates some of the Composition API effects:</p>
+
+<ul>
+<li><a href="https://xamlbrewer.wordpress.com/2016/04/08/uwp-composition-effects-hue-rotation/">Hue Rotation</a></li>
+<li><a href="https://xamlbrewer.wordpress.com/2016/04/19/uwp-composition-effects-temperature-and-tint/">Temperature and Tint</a></li>
+<li><a href="https://xamlbrewer.wordpress.com/2016/05/15/uwp-composition-effects-chaining/">Effect chaining</a></li>
+</ul>
+
+<p><a href="https://github.com/higankanshi/CompositionHelper">CompositionHelper</a> CompositionHelper for UWP Composition API. Now we support all animation of Composition API. You can build composition animations by fluent interface. You can use XAML to set UIElement's Visual composition properties. We found there are some Airspace issue between Composition API visual tree and XAML visual tree, so we remove shadow effect, but you can still find those codes in early Commit.</p>
+
+<p><a href="https://github.com/agangal/CompositionAPI">CompositionAPI</a></p>
+
+<p><a href="https://github.com/aL3891/CompositionAnimationToolkit">Composition Animation Toolkit</a> The Composition animation toolkit is a set of tools that is ment to make working with animations in the Windows.Ui.Composition libraries easier. Specifically, it allows users to write animation expressions using statically typed lambda expressions instead of strings. It also has features to make working with property sets easier, such as providing a wrapper that user classes can derive from to make static properties for the contents in the property set, as well as generating property sets from any other class, including anonymous classes.</p>
+
+<p><a href="https://github.com/robmikh/compositionimageloader">CompositionImageLoader</a> An image loader to use with the Windows.UI.Composition api based on Win2D and written with C#.</p>
+
+<p><a href="https://github.com/cyrilcathala/CompositionBlendEffect">CompositionBlendEffect</a> Simple blend effect with Windows.UI.Composition</p>
+
+<p><a href="https://github.com/a7an/UICompositionExploration">UICompositionExploration</a> Exploration of UI Composition or something like that could be hypothesized when there is yet another project with no description. </p>
+
+<h1>
+<a id="frameworks" class="anchor" href="#frameworks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Frameworks</h1>
+
+<p><a href="https://github.com/waynebaby/MVVM-Sidekick">MVVM-Sidekick</a> A Modern light-weight MVVM framework based on RX and Await</p>
+
+<p><a href="https://github.com/MugenMvvmToolkit/MugenMvvmToolkit">MugenMvvmToolkit</a> Mugen MVVM Toolkit makes it easier to develop cross-platform application using the Model-View-ViewModel design pattern. The Mugen MVVM Toolkit makes extensive use of Portable Class Libraries to provide maintainable cross platform C# native applications.</p>
+
+<p><a href="https://github.com/timdetering/mvvmlight">mvvmlight</a> Git mirror of GalaSoft MVVM Light Toolkit (<a href="https://mvvmlight.codeplex.com/">https://mvvmlight.codeplex.com/</a>)</p>
+
+<p><a href="https://github.com/PrismLibrary/Prism">Prism</a> Prism is a framework for building loosely coupled, maintainable, and testable XAML applications in WPF, Windows 10 UWP, and Xamarin Forms.</p>
+
+<p><a href="https://github.com/Caliburn-Micro/Caliburn.Micro">Caliburn.Micro</a> A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability. <a href="http://caliburnmicro.com/">http://caliburnmicro.com/</a></p>
+
+<p><a href="https://github.com/OkraFramework/Okra.Core">Okra App Framework</a> The Okra App Framework is designed to support the development of .Net Windows Store applications, in particular those following the MVVM pattern. <a href="http://okraframework.github.io">http://okraframework.github.io</a> -  <a href="https://github.com/OkraFramework/Okra.Platform.UniversalWindows">Okra.Platform.UniversalWindows</a> provides platform specific code for developing Okra App Framework based UWP applications</p>
+
+<h1>
+<a id="controls" class="anchor" href="#controls" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controls</h1>
+
+<p><a href="https://github.com/Microsoft/UWPCommunityToolkit">UWPCommunityToolkit</a> Microsoft has assembled a few Controls, many of them from other projects on this list, and other misc helper libs for UWP programming. At the moment, it is far less ambitious in scope than their Template 10 project, yet for some reason they have heavily promoted this Community Toolkit both with press releases and featuring on their <a href="https://developer.microsoft.com/en-us/windows/samples">Developer website</a>. The <a href="https://github.com/Microsoft/UWPCommunityToolkit-docs">UWPCommunityToolkit-docs</a> is a separate GitHub project which feeds this <a href="https://developer.microsoft.com/en-us/windows/uwp-community-toolkit">Microsoft.com Windows Dev site</a>. There is a <a href="https://www.microsoft.com/store/apps/9nblggh4tlcq">Sample App in Windows Store</a> that allows you to see exactly what is in the kit. </p>
+
+<p>There is no mention of any Blend specific features or add-ons but there is an instruction on <a href="https://developer.microsoft.com/en-us/windows/uwp-community-toolkit/toolbox">how to add the kit to the VS 2015 Designer Toolbox</a>.</p>
+
+<p>For some reason Windows Composition is missing in action for this kit. IMO, both Windows Composition and Win2D are unique Microsoft UWP technologies that can make the platform exciting and are natural candidates for this Microsoft showcase.</p>
+
+<p>Controls:</p>
+
+<ul>
+<li>   AdaptiveGridView</li>
+<li>   HamburgerMenu</li>
+<li>   HeaderedTextBlock</li>
+<li>   ImageEx</li>
+<li>   PullToRefreshListView</li>
+<li>   RadialGauge</li>
+<li>   RangeSelector</li>
+<li>   RotatorTile</li>
+<li>   SlideableListItem</li>
+</ul>
+
+<p><a href="https://github.com/QuinnDamerell/UniversalMarkdown">UniversalMarkdown</a> A markdown parsing and rendering library for C# and Windows Universal Apps <a href="http://baconit.quinndamerell.com/">http://baconit.quinndamerell.com/</a> Universal Markdown is your one-stop-shop for all of your markdown needs in C#. Universal markdown was built for the open source reddit app Baconit, but hopefully it will be adopted by others and improved by the community. </p>
+
+<p><a href="https://github.com/ignacy130/WinRT-StandardDateFormatPicker">WinRT-StandardDateFormatPicker</a> Simple control based on ComboBoxes to pick date in common in Europe and most of the world format dd-mm-yyyy. Wiki: <a href="https://github.com/ignacy130/WinRT-StandardDateFormatPicker/wiki">https://github.com/ignacy130/WinRT-StandardDateFormatPicker/wiki</a></p>
+
+<p><a href="https://github.com/MacawNL/WinRT-RichTextBlock.Html2Xaml">RichTextBlock.Html2Xaml</a> The WinRT RichTextBlock control serves to display read-only rich formatted text. However, it supports a limited subset of XAML, and no HTML. In scenario's where you want to display a field that contains HTML rich formatted text (e.g. when you have clients on multiple platforms, such as web, WinRT, iOS and Android), this package offers an alternative to using an embedded browser control. Using a browser control impacts performance and limits the UI experience (e.g. the WebView control does not support transparency). RichTextBlock.Html2Xaml adds an Html extension property to RichTextBlock controls, that you can set (or data bind) to a string containing an Html snippet.</p>
+
+<p><a href="https://github.com/mntone/WinRtLibrary">Mntone WinRT Library</a> This is my useful library for UWP and Windows Store app - UI.Xaml.Controls - TypedDataTemplateSelector - VisualTreeHelper2</p>
+
+<p><a href="https://github.com/zmtzawqlp/UWP-master">UWP-master</a>Some controls such as FlexGrid, DataGrid, Charts etc.</p>
+
+<p><a href="https://github.com/CatalystCode/radial-menu">Radial Menu</a> A Radial Menu for Windows UWP Applications, as made popular by the first versions of the modern OneNote App for Windows. Create radial menus floating op top of your application. The control supports variable numbers of buttons, toggle &amp; radio buttons, a selector for long lists, and a fancy metered menu for intuitive selection of numbers.</p>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Radial-Gauge-Sample">UWP-Radial-Gauge-Sample</a> Demonstrates using the WinRT XAML Toolkit Radial Gauge on the Universal Windows Platform</p>
+
+<p><a href="https://github.com/XamlBrewer/UWP-Composition-Radial-Gauge">UWP-Composition-Radial-Gauge</a> A XAML Radial Gauge Custom Control for UWP that is partially drawn by the Composition API. A blog post that explains the code is right here: <a href="https://xamlbrewer.wordpress.com/2016/01/23/building-a-custom-uwp-control-with-xaml-and-the-composition-api/">https://xamlbrewer.wordpress.com/2016/01/23/building-a-custom-uwp-control-with-xaml-and-the-composition-api/</a>. There's a newer version of this control in the UWP Community Toolkit: <a href="https://github.com/Microsoft/UWPCommunityToolkit">https://github.com/Microsoft/UWPCommunityToolkit</a>.</p>
+
+<p><a href="https://github.com/galazzo/RadialSlider">RadialSlider</a> A radial Slider for Windows 10 Universal Windows Platform (UWP)</p>
+
+<p><a href="https://github.com/deanchalk/SplitViewMenuUWP">SplitViewMenuUWP</a> A custom control for a split view (hamburger) left menu for windows 10 univeral apps</p>
+
+<p><a href="https://github.com/rickapps/UWP-UniformGrid-Control">UWP-UniformGrid-Control</a> The missing UniformGrid control from WPF ported to UWP</p>
+
+<p><a href="https://github.com/wasteam/waslibs">Windows App Studio Libraries</a> This repository contains the source code of the libraries used by Windows App Studio in the generated apps. There are three libraries: utility classes to create XAML applications, all the data sources available in Windows App Studio apps, and XAML controls for Windows 10 apps only.</p>
+
+<p><a href="https://github.com/deanchalk/ExpanderUWP">ExpanderUWP</a> Expander Control for Microsoft UWP</p>
+
+<p><a href="https://github.com/Amrykid/Kimono">Kimono</a> A Windows 10 UWP (.NET) library with a set of UI controls</p>
+
+<p><a href="https://github.com/jamesmcroft/WinUX-UWP-Toolkit">WinUX-UWP-Toolkit</a> A collection of core XAML controls and extensions to use in your personal universal Windows apps <a href="http://jamescroft.co.uk/blog/uwp/introducing-croft-core-for-universal-windows-apps/">http://jamescroft.co.uk/blog/uwp/introducing-croft-core-for-universal-windows-apps/</a></p>
+
+<p><a href="https://github.com/nmetulev/comet">comet</a> Universal Windows Platform (UWP) toolkit library. Contains controls for creating great user experiences for Universal Windows Applications</p>
+
+<p><a href="https://github.com/xyzzer/WinRTXamlToolkit">WinRTXamlToolkit</a> A set of controls, extensions and helper classes for Windows Runtime XAML applications.</p>
+
+<p><a href="https://github.com/NaylahProject/Naylah.Toolkit.UWP">Naylah.Toolkit.UWP</a> Naylah SDK for Universal Windows Plataform <a href="http://naylahproject.github.io/Naylah.UWP/">http://naylahproject.github.io/Naylah.UWP/</a> Contain useful libraries, controls, helpers, architecture, etc. The intent is create a community for developers focusing in deliver better-beatiful apps. To create next generation of apps.</p>
+
+<p><a href="https://github.com/Coding4FunProjects/Coding4FunToolkit">Coding4FunToolkit</a> This is where Coding4Fun will house all our cool controls and tools that we come up with</p>
+
+<p><a href="https://github.com/LanceMcCarthy/UwpProjects">UwpProjects</a> A set of UWP controls and utilities. 
+    BusyIndicators in UwpHelpers.Controls.BusyIndicators (cool custom busy indicator)
+    AdaptiveGridView in UwpHelpers.Controls.ListControls (maintains aspect ratio of items as it scales for column width)
+    BlurElementAsync in UwpHelpers.Examples.Helpers (converts any UIElement into a blurred BitmapImage)
+    IncrementalLoadingCollection in UwpHelpers.Controls.Common (demo in Examples)
+    NetworkImage in UwpHelpers.Controls.ImageControls (an Image control that shows download progress)</p>
+
+<p><a href="https://github.com/bak301/WinRT_Calendar">WinRT_Calendar</a></p>
+
+<p><a href="https://github.com/JuniperPhoton/FABExt.UWP">FABExt.UWP</a> A FAB-like control on Windows.</p>
+
+<p><a href="https://github.com/pdehne/QuickReturnHeader">QuickReturnHeader</a> Universal Windows Platform (UWP) quick return header control to be used with ListViews - Add the QuickReturnHeader class to your project. Then define a regular ListView and add a QuickReturnHeader to its header. Make sure to tell the header which ListView it belongs to using the TargetListView property:</p>
+
+<p><a href="https://github.com/charri/Font-Awesome-WPF">Font-Awesome-WPF/UWP</a>  WPF &amp; UWP controls for the iconic font and CSS toolkit Font Awesome. Font Awesome: <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a> UWP glyph control for the iconic font and CSS toolkit Font Awesome. <a href="https://github.com/charri/Font-Awesome-WPF/blob/master/README-UWP.md">UWP Readme</a></p>
+
+<p><a href="https://github.com/FrayxRulez/SwipeListView">SwipeListView</a> A ListView with swipe handling like the one in new Outlook Mail app for Windows 10.</p>
+
+<h1>
+<a id="ui" class="anchor" href="#ui" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI</h1>
+
+<p><a href="https://github.com/reactiveui/ReactiveUI">ReactiveUI</a> A MVVM framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform. Supports Xamarin.iOS, Xamarin.Android, Xamarin.Mac, Xamarin Forms, WPF, Windows Forms, Windows Phone 8, Windows Store and Universal Windows Platform (UWP). <a href="http://www.reactiveui.net">http://www.reactiveui.net</a></p>
+
+<p><a href="https://github.com/aritchie/userdialogs">userdialogs</a> A cross platform library that allows you to call for standard user dialogs from a shared/portable library, Actionsheets, alerts, confirmations, loading, login, progress, prompt, toast... async just for fun. Supports Android, iOS, Windows Phone 8.0 (silverlight), and Unified Windows Platform (UWP, UAP)</p>
+
+<p><a href="https://github.com/deanihansen/BlendrocksToolkit">BlendrocksToolkit</a> Windows UWP toolkit that which enabled insanely cool page transitions and easier navigation and app handling.</p>
+
+<p><a href="https://github.com/ThatLousyGuy/Monolith">Monolith</a> Monolith is a Windows library that lets you create animations in codebehind in a fluent, somewhat straightforward manner. It's a wrapper around the Windows.UI.Xaml.Media.Animation library that removes as much of the setup as possible. (Thanks to <a href="https://github.com/tomzorz/awesome-uwp">Awesome UWP resources list</a> for the head's up on this interesting project.</p>
+
+<p><a href="https://github.com/JuniperPhoton/MonolithUWP">MonolithUWP</a> A UWP version of Monolith,which is a Windows library that lets you create animations in codebehind in a fluent, somewhat straightforward manner.</p>
+
+<p><a href="https://github.com/dotMorten/WindowsStateTriggers">WindowsStateTriggers</a> A collection of custom visual state triggers</p>
+
+<h1>
+<a id="libs-uwp" class="anchor" href="#libs-uwp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Libs UWP</h1>
+
+<p>Libraries that may support UWP specific features.</p>
+
+<p><a href="https://github.com/Opiumtm/IpatovUWP">IpatovUWP</a> UWP common use helper libraries such as util code for DataBinding. New, is a Markup rendering engine based on Direct2D instead of XAML tree manipulations. <a href="https://www.nuget.org/packages/Ipatov.MarkupRender/">Nuget: Ipatov.MarkupRender</a> First public release is very simplistic and not feature rich, but most important feature of this library is very high performance.</p>
+
+<p><a href="https://github.com/tomzorz/Groves">Groves</a> A UWP library by the author of the <a href="https://github.com/tomzorz/awesome-uwp">Awesome UWP resources list</a> </p>
+
+<p><a href="https://github.com/YAWL/YAWL.Composition">YAWL.Composition</a> Composable building blocks for MVVM based Windows 10 applications</p>
+
+<p><a href="https://github.com/jamesqo/observable-vector">observable-vector</a> A no-frills implementation of IObservableVector for Windows 10 apps.</p>
+
+<p><a href="https://github.com/jamesqo/Shims.Xaml">Shims.Xaml</a> Easily create libraries that work on both WPF and Windows 10.</p>
+
+<p><a href="https://github.com/Microsoft/XamlBehaviors">XamlBehaviors</a> This is the official home for XAML Behaviors on GitHub. XAML Behaviors is an easy-to-use means of adding common and reusable interactivity to your Windows UWP applications with minimal code. It is available for both native and managed applications.</p>
+
+<p><a href="https://github.com/cwensley/Portable.Xaml">Portable.Xaml</a> Portable .NET library for reading/writing xaml files. This is intended to be used to read Xaml on desktop, mobile, and CoreCLR platforms.</p>
+
+<p><a href="https://github.com/jamesqo/typed-xaml">typed-xaml</a> Advanced generics support for WPF and Windows 10.</p>
+
+<p><a href="https://github.com/RReverser/uwp-chrome">uwp-chrome</a> Experimental chrome API shim for Universal Windows Platform (UWP / WinRT)</p>
+
+<p><a href="https://github.com/EdiWang/UWP-Helpers">UWP-Helpers</a> Helpers and Utils for UWP Projects</p>
+
+<p><a href="https://github.com/igorkulman/Kulman.UWP">Kulman.UWP</a> Collection of utilities and services for UWP apps</p>
+
+<p><a href="https://github.com/MyToolkit/MyToolkit">MyToolkit</a> MyToolkit for .NET <a href="http://mytoolkit.io">http://mytoolkit.io</a> MyToolkit is a set of .NET libraries containing lots of useful classes for various .NET platforms like UWP/WinRT (Universal Windows Apps), Windows Phone and WPF. The goal is to provide missing or replace existing classes to support the development of high-quality Windows and Windows Phone applications. For example, the library provides often used MVVM infrastructure classes, missing UI controls, IoC classes, additional LINQ extension methods and much more.</p>
+
+<p><a href="https://github.com/Cimbalino/Cimbalino-Toolkit">Cimbalino-Toolkit</a> Cimbalino Toolkit <a href="http://cimbalino.org">http://cimbalino.org</a> Cimbalino Toolkit is a set of useful and powerful tools that will help you build your Windows Platform applications.</p>
+
+<p><a href="https://github.com/scottdorman/cadru">cadru</a> A Microsoft .NET Framework toolkit <a href="http://scottdorman.github.io/cadru">http://scottdorman.github.io/cadru</a> Cadru is a utility framework containing new APIs and extensions to the core .NET Framework to help complete your developer toolbox. It is designed to be portable first, which means that the majority of the library is available as a Portable Class Library (PCL) </p>
+
+<p><a href="https://github.com/Microsoft/Windows-task-snippets">Windows-task-snippets</a> This repo collects snippets of ready-to-use code that accomplish small but useful tasks of interest to Universal Windows Platform (UWP) app developers. These snippets represent simple solutions to common problems, and simple recipes to help you implement new app features. </p>
+
+<p><a href="https://github.com/SvenEV/UWP-Networking-Essentials">UWP-Networking-Essentials</a> Simple and lightweight networking (including RPC) for Universal Windows Platform apps</p>
+
+<p><a href="https://github.com/LocalJoost/ComposableAdaptiveTriggerDemo">ComposableAdaptiveTriggerDemo</a> Demo of a AdaptiveTrigger that works with a StateTrigger inside a CompositeStateTrigger from WindowsStateTriggers</p>
+
+<p><a href="https://github.com/YAWL/YAWL.Common">YAWL.Common</a> Common library for all new Windows Phone/Store/UWP/Mobile and Xamarin applications</p>
+
+<p><a href="https://github.com/AhmedMabrouck/WinRT.IncrementalLoadingCollection">WinRT.IncrementalLoadingCollection</a> A Windows Runtime custom collection that supports observability and incremental loading out of the box.</p>
+
+<p><a href="https://github.com/inflatablefriends/inflatable-toolkit">inflatable-toolkit</a> Stuff we use a lot in WinRT apps</p>
+
+<p><a href="https://github.com/robpaveza/bigint-winrt">bigint-winrt</a> A Windows Runtime API for big integers. The source BigInteger implementation is forked from <a href="https://github.com/kurmasz/bigint">https://github.com/kurmasz/bigint</a> which is based on the bigint library by Matt McCutchen. </p>
+
+<p><a href="https://github.com/onovotny/MetroLog">MetroLog</a> MetroLog is a lightweight logging framework designed for Windows Store and Windows Phone 8 apps. Although the API is based on NLog and log4net, the intention is that it's a very basic logging system. 
+The need for it to be basic comes from the fact that the Windows Store apps API surface area intentionally limited for very specific applications. This project came out of the fact that porting NLog to Windows Store apps is difficult because of it's incredibly rich feature set, most of which is not workable in Windows Store apps.</p>
+
+<p><a href="https://github.com/onovotny/WinRTTimeZones">WinRTTimeZones</a> Simple Time Zone conversion for WinRT, Windows Store and Windows Phone 8 apps</p>
+
+<p><a href="https://github.com/amoldeshpande/slartoolkit">SLARToolkit - Silverlight and Windows Phone Augmented Reality Toolkit</a> UWP adaptation from <a href="https://slartoolkit.codeplex.com/">CodePlex</a> This is an incomplete port of SLArToolkit for Windows 10 UWP. 
+<img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=SLARToolkit&amp;DownloadId=233583" alt="">
+I have added the capability to capture video for UWP apps, which was the major hurdle. Beginners Guide version for Windows 10 almost works, except for camera rotation being off by 90 degrees. </p>
+
+<p><a href="https://github.com/amoldeshpande/ModuloLib">ModuloLib</a> This is a C# Windows 10 UWP class library for the Modulo platform (<a href="http://www.modulo.co">http://www.modulo.co</a>) It contains basic serial communication as well as classes for interaction with the Display, Knob and Joystick modulos. (Modulo is a set of tiny modular circuit boards that you can assemble to build powerful programmable electronics without needing to design and assemble circuits from scratch.)</p>
+
+<p><a href="https://github.com/romagny13/UwpLib">UwpLib</a> Misc UWP </p>
+
+<p><a href="https://github.com/JuniperPhoton/JP.Utils.UWP">JP.Utils.UWP</a> </p>
+
+<p><a href="https://github.com/Lukasss93/Aura.Net">Aura.Net</a> Utilities Class Library for Windows Phone 8.1 RT &amp; UWP</p>
+
+<h1>
+<a id="libs-to-access-an-api" class="anchor" href="#libs-to-access-an-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Libs to access an API</h1>
+
+<p><a href="https://github.com/Mr1Penguin/DeviantartApi">DeviantartApi Library</a> DeviantartApi Library in C# for UWP, Win8.1, WinPhone8.1,. NET 4.5+, ASP.NET Core 1.0</p>
+
+<p><a href="https://github.com/ScottIsAFool/Bex">Bex</a> A PCL for accessing the MS Health Web APIs. For usage and an overview, please go to <a href="http://metronuggets.com/2015/07/10/introducing-bex-a-pcl-library-for-the-ms-health-apis/">http://metronuggets.com/2015/07/10/introducing-bex-a-pcl-library-for-the-ms-health-apis/</a></p>
+
+<p><a href="https://github.com/gantonious/Discord-UWP">Discord-UWP</a> A Discord wrapper in C# compatible with UWP.</p>
+
+<h1>
+<a id="libs-general" class="anchor" href="#libs-general" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Libs General</h1>
+
+<p>Libraries that are compatible with UWP but don't provide UWP specific feature support.</p>
+
+<p><a href="https://github.com/cureos/shim">Shim</a> Shim provides reduced or dummy implementations of .NET Framework types that are currently not represented in PCL, thereby expanding the ability to create Portable Class Libraries from legacy code.</p>
+
+<p><a href="https://github.com/dshe/InternalContainer.cs">InternalContainer.cs</a> A simple IoC container in a single C# 6.0 portable class library (PCL) source file.</p>
+
+<p><a href="https://github.com/DecaTec/Portable-WebDAV-Library">Portable WebDAV Library</a> Portable WebDAV Library is a fully RFC 4918 compliant WebDAV client library which is implemented das portable class library (PCL) for use on desktop environments as well as mobile devices. <a href="https://decatec.de">https://decatec.de</a></p>
+
+<p><a href="https://github.com/NVentimiglia/Websockets.PCL">Websockets.PCL</a> C# Websockets for all platforms using native bridges</p>
+
+<p><a href="https://github.com/rdavisau/sockets-for-pcl">sockets-for-pcl</a> Cross-platform socket API for Xamarin iOS/Android/Forms, Xamarin.Mac/MonoMac, Windows Phone 8/8.1, Windows Store and Windows Desktop.</p>
+
+<p><a href="https://github.com/App-vNext/Polly">Polly</a> Polly is a .NET 3.5 / 4.0 / 4.5 / PCL library that allows developers to express transient exception handling policies such as Retry, Retry Forever, Wait and Retry or Circuit Breaker in a fluent manner.</p>
+
+<p><a href="https://github.com/AArnott/PCLCrypto">PCLCrypto</a> PCLCrypto is an open source library that provides portable class library authors with cryptographic APIs that invoke platform-specific crypto automatically.</p>
+
+<p><a href="https://github.com/onovotny/BouncyCastle-PCL">BouncyCastle-PCL</a> PCL Version of BouncyCastle targetting .NET, SL, WP, WinRT, .NET Core and CoreCLR. The Bouncy Castle Crypto package is a C# implementation of cryptographic algorithms and protocols, it was developed by the Legion of the Bouncy Castle, a registered Australian Charity, with a little help! The Legion, and the latest goings on with this package, can be found at <a href="http://www.bouncycastle.org">http://www.bouncycastle.org</a>. In addition to providing basic cryptography algorithms, the package also provides support for CMS, TSP, X.509 certificate generation and a variety of other standards such as OpenPGP.</p>
+
+<p><a href="https://github.com/csMACnz/BCLExtensions">BCLExtensions</a> Base Class Library Extensions for C# base class library classes, across .Net, Silverlight, WinRT. You can view the list if extensions available and future extensions to come on the <a href="https://github.com/csMACnz/BCLExtensions/wiki/Extensions">Extensions Wiki Page</a>.</p>
+
+<p><a href="https://github.com/BananaScheriff/ExcelReader-WinRT">ExcelReader-WinRT</a> Excel sheets reader for Uniwersal Windows Platform</p>
+
+<p><a href="https://github.com/scionwest/ValidatableBase">ValidatableBase</a> Model Validation for Universal WinRT Apps through delegate method invocation per-property or DataAnnotation styled attribute validation. Added validation interception support. You may now have the built-in validation rules invoke a delegate method. This provides you with a little more flexibility when performing validation. You may piggy back on top of existing rules for minor checks instead of resorting to a full delegate validation method. By letting your model inherit from ValidatableBase, you can force validation checks on a model from within your view model. Binding to the view is really easy, using one of the two provided converters. The library comes with support for validating minimum and maximum numeric values, ranges of numeric values, string length, null objects, empty collections, empty or null strings and custom delegate method invocation. If you want to write your own attribute validation, you just need to implement IValidationRule and then decorate your object.</p>
+
+<p><a href="https://github.com/Yortw/Yort.Ntp">Yort.Ntp</a> A cross platform NTP client library for .Net platforms. Allows you to easily retrieve an accurate, current date &amp; time from internet NTP servers. For platforms that support task based async: var client = new Yort.Ntp.NtpClient(); var currentTime = await client.RequestTimeAsync();</p>
+
+<p><a href="https://github.com/Yortw/Yort.Http.ClientPipeline">Yort.Http.ClientPipeline</a> A collection of handlers, filters, extensions and other stuff related to System.Net.Http.HttpClient and Windows.Web.Http.HttpClient.</p>
+
+<p><a href="https://github.com/Yortw/RSSDP">Really Simple Service Discovery Protocol</a> RSSDP is a 100% .Net implementation of the Simple Service Discovery (SSDP) protocol that is part of the Universal Plug and Play (UPnP) standard. SSDP allows you to discover devices and services on a (local) network. RSSDP is designed primarily to publish and discover custom or 'basic' devices, and as such does not implement the full UPnP device architecture. If you are looking to build a device for which a full UPnP device schema exists, this is not the library for you (sorry! though I guess you can fork and extend if you like). If you are looking for a way to discover a custom service (such as a proprietary REST or SOAP service) from a device, RSSDP might be the solution for you.</p>
+
+<p><a href="https://github.com/Yortw/PoolSharp">PoolSharp</a> PoolSharp is a simple, light weight, thread safe object pool. It also supports pooling of disposable types, managing the life time of pooled objects and performing early dispose when possible. Pool implementations implement a simple common interface, so they can be mocked or replaced with alternatives.</p>
+
+<p><a href="https://github.com/Meowtrix/UniversalClassLibrary">UniversalClassLibrary</a> Class library for all .NET platforms. (Guessing that Universal actually includes Universal Windows Platform)</p>
+
+<h1>
+<a id="media" class="anchor" href="#media" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Media</h1>
+
+<p><a href="https://github.com/AndrewGaspar/MediaFoundation">MediaFoundation</a> Some helper functions for WinRT for getting media information about some URL</p>
+
+<p><a href="https://github.com/krishnan-unni/FFMPEGHelper">FFMPEGHelper</a> Windows 10 Universal WinRT component for FFMPEG library</p>
+
+<p><a href="https://github.com/FrayxRulez/Universal.WebP">Universal.WebP</a> This repository contains a Windows Runtime Component that wraps up libwebp and allows to decode static and animated WEBP images.</p>
+
+<h1>
+<a id="graphics-2d" class="anchor" href="#graphics-2d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Graphics 2D</h1>
+
+<p><a href="https://github.com/Microsoft/Win2D">Win2D</a> Win2D is an easy-to-use Windows Runtime API for immediate mode 2D graphics rendering with GPU acceleration. It is available to C# and C++ developers writing Windows apps for Windows 8.1, Windows Phone 8.1 and Windows 10. It utilizes the power of Direct2D, and integrates seamlessly with XAML and CoreWindow. <a href="http://microsoft.github.io/Win2D">http://microsoft.github.io/Win2D</a> (<a href="https://github.com/Microsoft/Win2D-Samples">https://github.com/Microsoft/Win2D-Samples</a>)</p>
+
+<p><a href="https://github.com/mntone/SvgForXaml">SvgForXaml</a> Draw image from svg file with Win2D</p>
+
+<p><a href="https://github.com/XamlAnimatedGif/XamlAnimatedGif">XamlAnimatedGif</a> A simple library to display animated GIF images in XAML apps (WPF, WinRT, Windows Phone)</p>
+
+<p><a href="https://github.com/sskodje/GifImageSource">GifImageSource</a> GifImageSource is a Windows Runtime Component for WinRT projects, made for rendering GIF images in a resource efficient way using Direct2D.</p>
+
+<p><a href="https://github.com/teichgraf/WriteableBitmapEx">WriteableBitmapEx</a> The WriteableBitmapEx library is a collection of extension methods for the WriteableBitmap. The WriteableBitmap class is available for all XAML flavors including Windows Phone, WPF, WinRT Windows Store XAML, (Windows 10) UWP and Silverlight. It was even ported to Windows Embedded. WriteableBitmapEx allows the direct manipulation of a bitmap and can be used for image manipulation, to generate fast procedural images by drawing directly to a bitmap and more. The WriteableBitmap API is very minimalistic and there's only the raw Pixels array for such operations. The WriteableBitmapEx library tries to compensate that with extensions methods that are easy to use like built in methods and offer GDI+ like functionality. The library extends the WriteableBitmap class with elementary and fast (2D drawing) functionality, conversion methods and functions to combine (blit) WriteableBitmaps. The extension methods are grouped into different C# files using a partial class approach. It is possible to include just a few methods by using the specific source code files directly or the full functionality via the built binaries. </p>
+
+<p><a href="https://github.com/asiertarancon/ImagingUWP">ImagingUWP</a> UWP app with Lumia Imaging SDK</p>
+
+<h1>
+<a id="graphics-3d" class="anchor" href="#graphics-3d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Graphics 3D</h1>
+
+<p><a href="http://sharpdx.org/">SharpDX</a> SharpDX is an open-source managed .NET wrapper of the DirectX API. Windows Store Apps PCL .NET 4.6+ including the Universal Windows Platform (UWP) &amp; Windows Desktops that supports .NET 4.5+
+<a href="https://github.com/sharpdx/SharpDX">https://github.com/sharpdx/SharpDX</a> </p>
+
+<p><a href="https://github.com/sharpdx/SharpDX-Samples">SharpDX Samples</a> This repository contains more than 100+ code samples using SharpDX</p>
+
+<p><a href="https://github.com/oguna/SharpDXTex">SharpDXTex</a> Texture library for SharpDX3.0 - Managed wrapper of DirectXTex - In SharpDX3.0, D3DX libraries, Texture.LoadFromFile or Texture.LoadFromStream, were removed. If you want to use taht functions, you can use this library alternatively.</p>
+
+<p><a href="https://github.com/mrjfalk/SharpDXTutorials">SharpDXTutorials</a> Code for my SharpDX Tutorials at <a href="http://www.johanfalk.eu">www.johanfalk.eu</a>.</p>
+
+<p><a href="https://github.com/RobyDX/SharpDX_D3D12HelloWorld">SharpDX D3D12 Hello World</a>  DirectX12 Hello World samples created with SharpDx and C# <a href="http://www.notjustcode.it">http://www.notjustcode.it</a> - This sample are porting of original D3D12 Hello World realised by Microsoft. I've converted this samples in C# using last version of SharpDx and <a href="https://github.com/RobyDX/SharpDX_Demo">DirectX11 Tutorial</a> This is a collection of demos that show how to use DirectX11 tecnology with SharpDX library (<a href="http://sharpdx.org/">http://sharpdx.org/</a>) and C# in .Net 4.5 platform Every source want to be as easy as possible to give attention to the arguments of each one.</p>
+
+<p><a href="https://github.com/PJayB/DirectCompositionDirectX12Sample">DirectCompositionDirectX12Sample</a> A demonstration of DirectComposition and DirectX 12 interoperability - This sample demonstrates how to implement DirectComposition alongside DirectX 12. DirectComposition allows you to efficiently composite your rendered scene onto other windows using hardware acceleration.  For more information, see:</p>
+
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/hh437371(v=vs.85).aspx">MSDN page for DirectComposition</a></li>
+<li><a href="http://blog.pjblewis.com/efficient-alpha-blended-windows-directcomposition/">Tutorial</a></li>
+<li>This sample is based on Microsoft's <a href="https://github.com/Microsoft/DirectX-Graphics-Samples">D3D12HelloTexture sample</a>. </li>
+</ul>
+
+<p><a href="https://libsdl.org/">SDL2</a> "Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D." There is suppossed to be a UWP port of SDL somewhere at <a href="https://libsdl.org/">https://libsdl.org/</a> but I haven't found it. I was also given this link: <a href="https://github.com/emscripten-ports/SDL2">https://github.com/emscripten-ports/SDL2</a> - At the moment there is no feeback on how robust this support is and how well in interacts with Windows Composition etc. </p>
+
+<p><a href="https://github.com/Microsoft/DirectXTK12">DirectXTK12</a> The DirectX Tool Kit (aka DirectXTK12) is a collection of helper classes for writing DirectX 12 code in C++ <a href="https://blogs.msdn.microsoft.com/chuckw/2016/07/18/directx-tool-kit-for-directx-12/">https://blogs.msdn.microsoft.com/chuckw/2016/07/18/directx-tool-kit-for-directx-12/</a></p>
+
+<p><a href="https://github.com/Microsoft/DirectXTK">DirectXTK</a> The DirectX Tool Kit (aka DirectXTK) is a collection of helper classes for writing DirectX 11.x code in C++ <a href="http://blogs.msdn.com/b/chuckw/archive/2012/03/02/directxtk.aspx">http://blogs.msdn.com/b/chuckw/archive/2012/03/02/directxtk.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/DirectXMath">DirectXMath</a> DirectXMath is an all inline SIMD C++ linear algebra library for use in games and graphics apps <a href="https://blogs.msdn.microsoft.com/chuckw/2012/03/26/introducing-directxmath/">https://blogs.msdn.microsoft.com/chuckw/2012/03/26/introducing-directxmath/</a></p>
+
+<p><a href="https://github.com/Microsoft/UVAtlas">UVAtlas</a> UVAtlas isochart texture atlas <a href="http://blogs.msdn.com/b/chuckw/archive/2014/11/14/uvatlas-return-of-the-isochart.aspx">http://blogs.msdn.com/b/chuckw/archive/2014/11/14/uvatlas-return-of-the-isochart.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/DirectXTex">DirectXTex</a> DirectXTex texture processing library <a href="http://blogs.msdn.com/b/chuckw/archive/2011/10/28/directxtex.aspx">http://blogs.msdn.com/b/chuckw/archive/2011/10/28/directxtex.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/DirectX-Graphics-Samples">DirectX-Graphics-Samples</a> This repo contains the DirectX Graphics samples that demonstrate how to build graphics intensive applications on Windows.</p>
+
+<p><a href="https://github.com/Microsoft/DXUT">DXUT</a> DXUT is a "GLUT"-like framework for Direct3D 11.x Win32 desktop applications; primarily samples, demos, and prototypes. <a href="http://blogs.msdn.com/b/chuckw/archive/2013/09/16/dxut-for-win32-desktop-update.aspx">http://blogs.msdn.com/b/chuckw/archive/2013/09/16/dxut-for-win32-desktop-update.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/FX11">FX11</a> Effects for Direct3D 11 (FX11) is a management runtime for authoring HLSL shaders, render state, and runtime variables together. <a href="http://blogs.msdn.com/b/chuckw/archive/2012/10/23/effects-for-direct3d-11-update.aspx">http://blogs.msdn.com/b/chuckw/archive/2012/10/23/effects-for-direct3d-11-update.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/UVAtlas">UVAtlas</a> UVAtlas isochart texture atlas <a href="http://blogs.msdn.com/b/chuckw/archive/2014/11/14/uvatlas-return-of-the-isochart.aspx">http://blogs.msdn.com/b/chuckw/archive/2014/11/14/uvatlas-return-of-the-isochart.aspx</a></p>
+
+<p><a href="https://github.com/Microsoft/DirectXMesh">DirectXMesh</a> DirectXMesh geometry processing library <a href="http://blogs.msdn.com/b/chuckw/archive/2014/06/27/directxmesh.aspx">http://blogs.msdn.com/b/chuckw/archive/2014/06/27/directxmesh.aspx</a> performing various geometry
+content processing operations including generating normals and tangent frames, triangle
+adjacency computations, and vertex cache optimization.</p>
+
+<h1>
+<a id="game-dev" class="anchor" href="#game-dev" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Game Dev</h1>
+
+<p><a href="https://github.com/mono/MonoGame">MonoGame</a> One framework for creating powerful cross-platform games. <a href="http://www.monogame.net">http://www.monogame.net</a> MonoGame is an open source implementation of the Microsoft XNA 4.x Framework. Our goal is to make it easy for XNA developers to create cross-platform games with extremely high code reuse.</p>
+
+<p><a href="https://github.com/craftworkgames/MonoGame.Extended">MonoGame.Extended</a> MonoGame.Extended is a portable class library designed to build on top of MonoGame. It may work also with XNA/FNA (not confirmed) and it should work on other platforms like Xamarin Android or iOS. If you do use it on another platform please let us know!</p>
+
+<p><a href="https://github.com/craftworkgames/FarseerPhysics.Portable">FarseerPhysics.Portable</a> This is a fork of the Farseer Physics Engine found on codeplex with a few minor changes to make it work as a Portable Class Library (PCL) with the PCL version of MonoGame.</p>
+
+<p><a href="https://github.com/SiliconStudio/xenko">Xenko Game Engine</a> Xenko is a powerful cross-platform game engine. Enjoy the latest features of .NET 4.6 and C#6 to write stunning games efficiently! Import your assets and build your world using the Game Studio. Create scripts with Microsoft Visual Studio and bring your game to life! Xenko is available for free using a dual license system and its source code is available on GitHub. <a href="http://xenko.com/">Xenko.com</a> - <a href="https://github.com/SiliconStudio/xenko-samples">Xenko Samples</a> - <a href="http://xenko.com/features/">Features</a> -  <a href="http://xenko.com/features/platforms/">Platforms</a></p>
+
+<p><a href="https://unity3d.com/">Unity</a>  - <a href="https://unity3d.com/get-unity">Get Unity</a> -  <a href="https://unity3d.com/unity/multiplatform">Platforms</a> Also supports Microsoft Hololens.</p>
+
+<h1>
+<a id="language" class="anchor" href="#language" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Language</h1>
+
+<p><a href="https://github.com/Microsoft/visualfsharp">The Visual F# compiler and tools</a> F# is a mature, open source, cross-platform, functional-first programming language which empowers users and organizations to tackle complex computing problems with simple, maintainable, and robust code. F# is used in a wide range of application areas and is supported by Microsoft and other industry-leading companies providing professional tools, and by an active open community. You can find out more about F# at <a href="http://fsharp.org">http://fsharp.org</a>.</p>
+
+<h1>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h1>
+
+<p>Opinionated Note: There is a lot of scaffolding issues to consider for testing UWP apps and I have a healthy sckepticism of social memes such as "Agile" and "Unit Testing" so this category is essential at the bottom of my attention list so, please let me know if I have missed any libraries and tools associated with UWP Testing</p>
+
+<p><a href="https://github.com/fernandoescolar/myweather">myweather</a> This is a demo of unit testing in UWP. It contains a T4 template to generate all the Spies, Stubs and Mocks of all the interfdaces found in your solution.</p>
+
+<p><a href="https://github.com/xunit/xunit">xUnit.net</a> xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework. Written by the original inventor of NUnit v2, xUnit.net is the latest technology for unit testing C#, F#, VB.NET and other .NET languages. xUnit.net works with ReSharper, CodeRush, TestDriven.NET and Xamarin. It is part of the ASP.NET Open Source Gallery under the Outercurve Foundation, licensed under Apache 2 (an OSI approved license). <a href="http://xunit.github.io/docs/getting-started-uwp.html">Getting Started with xUnit.net (Universal Windows Apps)</a></p>
+
+<p><a href="https://github.com/Microsoft/xunit-performance">xunit-performance</a> Provides extensions over xUnit to author performance tests.</p>
+
+<p><a href="https://github.com/kentcb/PCLMock">PCLMock</a> PCLMock is a simple mocking framework in a Portable Class Library. Existing mocking frameworks, such as Moq, do not work on platforms running a limited subset of the .NET framework. Writing mocks without the aid of a framework is laborious, error-prone, and results in inconsistent code. PCLMock aims to reduce this pain.</p>
+
+<p><a href="https://github.com/dennisdoomen/FluentAssertions">FluentAssertions</a> Fluent Assertions is a set of .NET extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style test. We currently use it in all our internal and client projects, and it is used in many open-source projects. It runs on .NET 4.0, 4.5, 4.6, CoreClr, .NET Native, Windows 8.1, Silverlight 5, Windows Phone 8.0… <a href="http://www.fluentassertions.com">http://www.fluentassertions.com</a></p>
+
+<p><a href="https://github.com/hivepeople/FluentAssertionsEx">FluentAssertionsEx</a> Extensions for FluentAssertions.</p>
+
+<p><a href="https://github.com/awesome-inc/FluentAssertions.Autofac">FluentAssertions.Autofac</a> Fluent Assertions extensions for Autofac</p>
+
+<p><a href="https://github.com/shouldly/shouldly">Shouldly</a> Should testing for .net - the way Asserting <em>Should</em> be! <a href="http://shouldly.readthedocs.org/en/latest">http://shouldly.readthedocs.org/en/latest</a></p>
+
+<h1>
+<a id="samples-for-reference-or-learning" class="anchor" href="#samples-for-reference-or-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Samples for Reference or Learning</h1>
+
+<p><a href="https://github.com/Microsoft/Windows-universal-samples">Windows-universal-samples</a> Official API samples for the Universal Windows Platform.</p>
+
+<p><a href="https://github.com/Microsoft/HealthClinic.biz">HealthClinic.biz</a> The samples contained in this repo are used to present an end-to-end demo scenario based on a fictitious B2B and multitenant system, named “HealthClinic.biz” that provides different websites, mobile apps, desktop apps, wearable apps, and services running on the latest Microsoft and open technologies aligned with announcements to showcase during … <a href="http://aka.ms/Connect">http://aka.ms/Connect</a></p>
+
+<p><a href="https://github.com/Microsoft/UWPQuickStart">UWPQuickStart</a> Building a Universal Windows app in Visual Studio is quick and easy. We've provided a sample app that you can download and learn how the various pieces fit together. We even encourage you to customize and send a version of this app to the Windows Store!</p>
+
+<p><a href="https://github.com/Microsoft/Windows-appsample-quizgame">Windows-appsample-quizgame</a> A peer-to-peer trivia game sample for the Universal Windows Platform (UWP). </p>
+
+<p><a href="https://github.com/Myfreedom614/UWP-Samples">UWP-Samples</a> Samples for Windows 10 Universal Platform</p>
+
+<p><a href="https://github.com/almirvuk/UWPCustomControlExample">UWP Custom Control Example</a> In this tutorial I will demonstrate how to make your own custom control for Universal Windows Platform application. This is very handy way of making your app more modular and responsive. For this tutorial I will make "Speaker" control, for some of our conference or event App. </p>
+
+<p><a href="https://github.com/mscherotter/InkToolbarAndCustomDryInk">InkToolbar and Custom Dry Ink</a> Windows UWP Sample that demonstrate how to use the InkToolbar Control with a custom Dry Ink CanvasControl</p>
+
+<pre><code>Implementing custom dry mode for ink
+Drawing ink using Win2D and effects
+Implementing ink erasing with the InkToolbar control with custom dry Ink
+Adding a custom button to the InkToolbar
+Rendering Win2D to be used in a Share contract
+Simultaneous pen and touch with the ScrollViewer control
+</code></pre>
+
+<h1>
+<a id="samples-that-dont-hurt-your-eyeballs" class="anchor" href="#samples-that-dont-hurt-your-eyeballs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Samples That Don't Hurt Your Eyeballs</h1>
+
+<p>There are lots of UWP App samples but most of them look like crap either because they are meant to demo a Windows 10 UWP feature or else total lack of aesetic sense. This section will give you some hope that one day the Windows Store won't be full of junk.</p>
+
+<p>This is an important category so I will really appreciate suggestions by anyone including the authors for any UWP Apps that I can add to this sub-list.</p>
+
+<p><a href="https://github.com/AppCreativity/Kliva">Kliva</a> "Thanks to Kliva, you'll now be able to get a detailed overview of all your sport endevaours and the data that goes with it." - Featured at Build 2016 in session:  <a href="https://channel9.msdn.com/Events/Build/2016/B818">"Creating Beautiful UX in a Real-World App with Visuals, Animations and Effects"</a> with this branch of the code: <a href="https://github.com/AppCreativity/Kliva/tree/alcatraz">https://github.com/AppCreativity/Kliva/tree/alcatraz</a></p>
+
+<p><a href="https://github.com/QuinnDamerell/Baconit">Baconit</a> A beatiful, powerful, reddit client for Windows 10. <a href="https://www.reddit.com/r/BaconitDev/">https://www.reddit.com/r/BaconitDev/</a> The highest rated reddit client for Windows Phone has been rewritten from the ground up and is now available for all Windows 10 devices. Now with a dynamic new UI, faster speeds, and features you have been asking for. Welcome to the new Baconit. We know you’re going to love it.</p>
+
+<p><a href="https://github.com/JuniperPhoton/MyerSplash">MyerSplash</a> Claims to be "the best looking Wallpaper App" <a href="http://juniperphoton.net/myersplash/">here</a> so let me know if you agree. An UWP app that allows you to browse and download high-quality wallpaper from Unsplash.com. To compile the project, please include <a href="https://github.com/JuniperPhoton/JP.Utils.UWP">JP.Utils.UWP</a> which is the lib I am developing to the solution. </p>
+
+<h1>
+<a id="samples-that-dont-know-they-are-samples" class="anchor" href="#samples-that-dont-know-they-are-samples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Samples That Don't Know They are Samples</h1>
+
+<h3>
+<a id="any-uwp-app-on-github" class="anchor" href="#any-uwp-app-on-github" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Any UWP App on GitHub</h3>
+
+<p>These are essentially samples of something or other that could be illuminating, since any OSS is there to be studied like an open book.</p>
+
+<p>I will try to list anything I come across. (Just in case is isn't obvious, there are hundreds of UWP apps on GitHub, so in theory there will eventually be hundreds listed in this section since for the most part my curation is limited to not listing empty or obviously out of date projects. If it gets to that, I will make a separate page. For now, the list is short because my priority is Data, Graphics and UI projects and the selection here is just random chance.</p>
+
+<p><a href="https://github.com/KvnSmith212/MultiTimer">MultiTimer</a> UWP timer app that allows for creation of many timers.</p>
+
+<p><a href="https://github.com/ultramega/flavordex-uwp">Flavordex Tasting Journal</a> Flavordex Tasting Journal for The Universal Windows Platform <a href="http://flavordex.com/">http://flavordex.com/</a> <a href="https://www.microsoft.com/store/apps/9nblggh5rhrx">Windows Store</a></p>
+
+<p><a href="https://github.com/javieresc97/CameraUWP">CameraUWP</a> Uwp app that uses emotion API</p>
+
+<p><a href="https://github.com/papricasix/MasterPasswordUWP">MasterPasswordUWP</a> Tool for managing stateless passwords for Windows (UWP). Based on: <a href="https://github.com/Lyndir/MasterPassword">https://github.com/Lyndir/MasterPassword</a> (Master Password is an algorithm and Java/iOS application to solve the real trouble with passwords.<a href="http://masterpasswordapp.com/">http://masterpasswordapp.com/</a>)</p>
+
+<p><a href="https://github.com/sunilmusinada/UWPCMS">UWPCMS</a> no description</p>
+
+<p><a href="https://github.com/miao17game/Noodles-Blog-UWP">Noodles-Blog-UWP</a> a UWP app of my Blog</p>
+
+<p><a href="https://github.com/JuniperPhoton/FaceBattleUWP">FaceBattleUWP</a> FaceBattle app for Universal Windows Platfrom.</p>
+
+<p><a href="https://github.com/ugur2323/UWP-Battery-Tester">UWP Battery Tester</a></p>
+
+<p><a href="https://github.com/TracyDa/WeatherOrNot">WeatherOrNot</a> UWP weather app</p>
+
+<p><a href="https://github.com/pre10der89/VideoCapture">VideoCapture Universal App</a> VideoCapture Universal App for Windows 8.1 and Windows UWP</p>
+
+<p><a href="https://github.com/hoenic07/pegelalarm-uwp">pegelalarm-uwp</a> The Pegelalarm app for Windows 10. When the project reaches a "beta" state it will also reach the Windows Store. You can find more information about the Pegelalarm project here: <a href="http://pegelalarm.at/">http://pegelalarm.at/</a></p>
+
+<p><a href="https://github.com/HeinPauwelyn/WeatherApplication">WeatherApplication</a> UWP project with MVVM, API's and IoC</p>
+
+<p><a href="https://github.com/cucmberium/Flantter.MilkyWay">Flantter.MilkyWay</a> Flantter.MilkyWay is twitter client for UWP and 3rd generation of Flantter. <a href="http://cucmber.net/flantter/">http://cucmber.net/flantter/</a></p>
+
+<p><a href="https://github.com/ikarago/Unigram">Unigram</a> Unigram – An Universal take on Telegram. Made by the community, for the community.   Windows 10 (Mobile) introduced with the Universal Windows Platform a whole list of features to make your (chatting) life easier. However, the current official Telegram-app has no signs of releasing an UWP-version with these capabilities soon. That’s why we decided to build our own.</p>
+
+<p><a href="https://github.com/nikitakonan/NASAapp">NASA App</a> UWP Nasa applicatio]()</p>
+
+<p><a href="https://github.com/ultramega/elementary-uwp">Elementary</a> Elementary is a simple Periodic Table and element reference application for The Universal Windows Platform. Videos provided by Periodic Videos (<a href="http://www.periodicvideos.com/">http://www.periodicvideos.com/</a>)</p>
+
+<ul>
+<li>   Zoomable Periodic Table of the Elements</li>
+<li>   Tap an element to view some basic details</li>
+<li>   Easy access to Wikipedia and a YouTube video on the element</li>
+<li>   Free and open source</li>
+</ul>
+
+<p><a href="https://github.com/agangal/TeamSnapV3">TeamSnapV3</a> This is a Windows 10 app for TeamSnap (<a href="http://www.teamsnap.com">www.teamsnap.com</a>). It uses the APIs that TeamSnap provides to build an app that mirrors TeamSnap's Android and iOS apps.  This is the 3rd revision of the original app I wrote.  It doesn't have all the features yet, and is still a work in progress. Some features are waiting for APIs to be made available. Link to the app : <a href="https://www.microsoft.com/en-us/store/apps/dugout/9nblggh5k2jd">https://www.microsoft.com/en-us/store/apps/dugout/9nblggh5k2jd</a> </p>
+
+<p><a href="https://github.com/evnik/WA082016">WA082016</a> Playing with Windows Universal apps  :)</p>
+
+<h1>
+<a id="games" class="anchor" href="#games" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Games</h1>
+
+<p><a href="https://github.com/orchidwarestudios/orchis-isle-uwp">Orchi's Isle, The Adventure Begins</a> Whimsical, exciting adventure game for Windows 10 devices. This project creates a 2D video game for the Universal Windows Platform (UWP). It can be played on a Windows 10 PC/Tablet. The code is written using DirectX 11, C++, and XAML. The code is currently compatible with Windows 10 desktop, tablet devices, and the XBox One console. It will not be optimized for Windows 10 phone devices.</p>
+
+<p><a href="https://github.com/davidmikh/DotaTournamentHub">DotaTournamentHub</a> A UWP app that displays information about Dota 2 Tournaments &amp; Leagues</p>
+
+<h1>
+<a id="end-of-the-list" class="anchor" href="#end-of-the-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>End of the List</h1>
+
+<p>If you have made it to the end of the list, here we have the weird and the wonderful and the questionables, just like the old maps for mariners that showed Sea Monsters at the Ends of the Earth</p>
+
+<h1>
+<a id="interfacing-with-plants" class="anchor" href="#interfacing-with-plants" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interfacing with Plants</h1>
+
+<p><a href="https://github.com/ms-iot/PlantSensor">PlantSensor</a> digiPlant is a Universal Windows Platform app that helps users monitor their plant. The app collects and displays tempoerature, brightness, and soil moisture data from various sensors. It runs on a Raspberry Pi and Windows 10 IoT Core. The Twitter page is currently a work in progress.</p>
+
+<p><a href="https://github.com/JuniperPhoton/PlantSitter">PlantSitter</a> An UWP app that can monitor your plant's growing status in real time and provide you some advice. <a href="http://juniperphoton.net/plantsitter">http://juniperphoton.net/plantsitter</a></p>
+
+<h1>
+<a id="pokemon-on-uwp" class="anchor" href="#pokemon-on-uwp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pokemon on UWP</h1>
+
+<p><a href="https://github.com/PoGo-Devs/PoGo">PoGo</a> UWP Client for Pokemon Go <a href="http://www.pogo-uwp.tk">http://www.pogo-uwp.tk</a></p>
+
+<p><a href="https://github.com/PoGo-Devs/PoGo-3D-Assets">PoGo-3D-Assets</a> 3D-Pokemon Models for PoGo-UWP-If you want to help check out the issues and make a coment on what you are working.</p>
+
+<p><a href="https://github.com/ST-Apps/PoGo-UWP">PoGo-UWP</a> PoGo for Windows 10 You can find the installation file for PoGo in Releases. Please read the whole release information before installing.<a href="https://github.com/ST-Apps/PoGo-UWP/wiki/Home-(EN)">wiki</a></p>
+
+<p><a href="https://github.com/thegamenicorus/PokemonGoStat">PokemonGoStat</a> C# class library used to calculate Pokemon Stats in Pokemon Go game</p>
+
+<p><a href="https://github.com/Afanyiyu/PokemonGoChina">PokemonGoChina</a> This is China customised version of Pokemon Go UWP. It using the Windows anniversary SDK (10.0.14393). </p>
+
+<p><a href="https://github.com/CuriousCurmudgeon/uwp_pokedex">UWP Pokedex</a> Simple UWP pokedex app for my Intro to UWP talk at Richmond Tech</p>
+
+<p><a href="https://github.com/pogodevorg/TU6">TU6</a> For the curious, this effort appears to be the origin of 3rd party Pokemon Go interfacing. "A repository to show what was done and achieved over a 3.5 day sleepless community hackathon"</p>
+
+<p><a href="https://github.com/tommyinb/PokemonGoMap">PokemonGoMap</a> A C# map project</p>
+
+<p><a href="https://github.com/PokemonGoMap/PokemonGo-Map">PokemonGo-Map</a> For the curious, this is Python, but surely you need to know if any dangerous Pokemons are lurking about in your neighborhood! -&gt; Live visualization of all the pokemon in your area... and more!</p>
+
+<p><img src="https://camo.githubusercontent.com/61d585e7706d136694f50ed2a092661b203a0a5d/687474703a2f2f70676d2e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f636f7665722e706e67" alt=""></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/grazies/The-UWP-Tools-List">The-uwp-tools-list</a> is maintained by <a href="https://github.com/grazies">grazies</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
